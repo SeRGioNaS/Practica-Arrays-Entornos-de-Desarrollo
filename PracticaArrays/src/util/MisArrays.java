@@ -52,6 +52,29 @@ public abstract class MisArrays {
 		}
 		return maximo;
 	}
+	
+	/**
+	 * Metodo que devuelve la minima nota ingresada en el array
+	 * 
+	 * @param array  Almacena las notas
+	 * 
+	 * @param minimo Almacena la nota minima
+	 * 
+	 * @return La nota minima del array
+	 */
+	public static int minimo(int[] array) {
+		int minimo = array[0];
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] < 0 || array[i] > 10) {
+				throw new IllegalArgumentException("El número debe estar entre 0 y 10");
+			} else {
+				if (array[i] < minimo) {
+					minimo = array[i];
+				}
+			}
+		}
+		return minimo;
+	}
 
 	public static float medianaNotas(int[] array) {
 		float mediana = 0;

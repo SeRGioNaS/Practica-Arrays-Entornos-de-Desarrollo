@@ -10,15 +10,15 @@ import util.MisArrays;
 
 class test_notaMaxima {
 
-	int[] Array1;
-	int[] Array2;
+	static int[] Array1;
+	static int[] Array2;
 	/**
 	 * Test que comprueba la instanciacion de los arrays
 	 */
 	@BeforeAll
 	static void setUp() {
-		int[] Array1 = new int []{ 6, 8, 4, 7, 3 };
-		int[] Array2 = new int []{ -1, 9, 5, 3, 4 };
+		Array1 = new int []{ 6, 8, 4, 7, 3 };
+		Array2 = new int []{ -1, 9, 5, 3, 4 };
 	}
 	
 	/**
