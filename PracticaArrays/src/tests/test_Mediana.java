@@ -27,9 +27,15 @@ class test_Mediana {
 	 * 
 	 */
 	@Test
-	void testMediana() {
+	void testMedianaValido() {
 		float obtenido = MisArrays.medianaNotas(Array1);
 		assertEquals(6, obtenido);
 	}
-
+	/**
+	 * Comprueba que los valores no son validos
+	 */
+	@Test
+	void testMedianaNoValido() {
+		assertThrows(IllegalArgumentException.class, () -> MisArrays.medianaNotas(Array2));
+	}
 }

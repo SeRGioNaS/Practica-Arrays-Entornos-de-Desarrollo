@@ -23,10 +23,18 @@ class test_mediaNotas {
 	 * Comprueba que la media es correcta
 	 */
 	@Test
-	void testMedia() {
+	void testMediaValida() {
 		float esperada = (float) 5.6;
 		float obtenida = MisArrays.mediaNotas(Array1);
 		assertEquals(esperada, obtenida);
+	}
+	/**
+	 * Comprueba que los valores no son validos
+	 */
+	@Test
+	void testMediaNoValida() {
+		assertThrows(IllegalArgumentException.class, () -> MisArrays.mediaNotas(Array2));
+		
 	}
 
 }

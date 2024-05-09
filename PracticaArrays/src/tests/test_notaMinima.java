@@ -25,9 +25,15 @@ class test_notaMinima {
 	 * Comprueba que la nota minima es correcta
 	 */
 	@Test
-	void testNotaMinima() {
+	void testNotaMinimaValido() {
 		int obtenido = MisArrays.minimo(Array1);
 		assertEquals(3, obtenido);
 	}
-
+	/**
+	 * Comprueba que los valores no son validos
+	 */
+	@Test
+	void testNotaMinimaNoValido() {
+		assertThrows(IllegalArgumentException.class, () -> MisArrays.minimo(Array2));
+	}
 }

@@ -26,9 +26,16 @@ class test_notaMaxima {
 	 * Comprueba que la nota maxima es correcta
 	 */
 	@Test
-	void testNotaMaxima() {
+	void testNotaMaximaValida() {
 		int obtenido = MisArrays.maximo(Array1);
 		assertEquals(8, obtenido);
+	}
+	/**
+	 * Comprueba que los valores no son validos
+	 */
+	@Test
+	void testNotaMaximaNoValida() {
+		assertThrows(IllegalArgumentException.class, () -> MisArrays.medianaNotas(Array2));
 	}
 
 }

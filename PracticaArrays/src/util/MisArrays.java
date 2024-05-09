@@ -75,7 +75,15 @@ public abstract class MisArrays {
 		}
 		return minimo;
 	}
-
+	/**
+	 * Metodo que devuelve la mediana de las notas ingresada en el array
+	 * 
+	 * @param array  Almacena las notas
+	 * 
+	 * @param mediana Almacena la mediana
+	 * 
+	 * @return La mediana del array
+	 */
 	public static float medianaNotas(int[] array) {
 		float mediana = 0;
 		for (int i = 0; i < array.length; i++) {
@@ -86,7 +94,7 @@ public abstract class MisArrays {
 				if (array.length % 2 == 0) {
 					mediana = (float) (array[array.length/2-1] + array[array.length/2])/2;
 				}else {
-					mediana = array[array.length/2];
+					mediana = (float) array[array.length/2];
 				}
 			}
 		}
