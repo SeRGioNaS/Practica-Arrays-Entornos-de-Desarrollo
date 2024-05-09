@@ -52,7 +52,7 @@ public abstract class MisArrays {
 		}
 		return maximo;
 	}
-	
+
 	/**
 	 * Metodo que devuelve la minima nota ingresada en el array
 	 * 
@@ -78,9 +78,17 @@ public abstract class MisArrays {
 
 	public static float medianaNotas(int[] array) {
 		float mediana = 0;
-		Arrays.sort(array);
-		if (array.length % 2 == 0) {
-
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] < 0 || array[i] > 10) {
+				throw new IllegalArgumentException("El número debe estar entre 0 y 10");
+			} else {
+				Arrays.sort(array);
+				if (array.length % 2 == 0) {
+					mediana = (float) (array[array.length/2-1] + array[array.length/2])/2;
+				}else {
+					mediana = array[array.length/2];
+				}
+			}
 		}
 		return mediana;
 	}
